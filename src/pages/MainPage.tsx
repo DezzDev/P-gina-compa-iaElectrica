@@ -26,7 +26,7 @@ export default function Component() {
   )
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen p-4">
       <header className="px-4 lg:px-6 h-14 flex items-center">
         <a className="flex items-center justify-center" href="#">
           <Zap className="h-6 w-6" />
