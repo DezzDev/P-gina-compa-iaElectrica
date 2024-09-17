@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/providers/theme-provider"
-import MainPage from "./pages/MainPage"
+import Home from "./pages/home"
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
-      <MainPage />
+      <Home />
     </ThemeProvider>
   )
 }
