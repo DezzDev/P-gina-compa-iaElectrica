@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import MainPage from "./components/MainPage"
+import { ThemeProvider } from "@/providers/theme-provider"
+import MainPage from "./pages/MainPage"
 import './App.css'
 
 function App() {

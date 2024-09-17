@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Zap, Clock, Shield, ThumbsUp, Wrench, Menu } from "lucide-react"
-import { ModeToggle } from "./mode-toggle"
+import { ModeToggle } from "../components/ui/toggle-theme"
 
 export default function Component() {
   const [isOpen, setIsOpen] = useState(false)
