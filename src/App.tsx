@@ -1,13 +1,18 @@
 import { ThemeProvider } from "@/providers/theme-provider"
-import Home from "./pages/home"
+import Home from "./pages/home/home"
 import './App.css'
+import Layout from "./pages/layout"
 
 function App() {
   
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
-      <Home />
+			<Layout>
+      	
+				<Home />
+				
+			</Layout>
     </ThemeProvider>
   )
 }
