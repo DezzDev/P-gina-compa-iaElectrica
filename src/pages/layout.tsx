@@ -31,14 +31,17 @@ function Layout({ children }: props) {
 
 	return (
 		<>
-			<header className="px-4 lg:px-6 h-14 flex items-center bg-blue-600 text-white">
+			<header className=" px-4 lg:px-6 flex items-center bg-blue-600 text-white">
+				
 				<a className="flex items-center justify-center" href="#">
 					<Zap className="h-6 w-6 text-orange-400" />
 					<span className="ml-2 text-lg font-semibold">DyCE</span>
 				</a>
+
 				<nav className="ml-auto hidden md:flex gap-6">
 					<NavItems />
 				</nav>
+
 				<Sheet open={isOpen} onOpenChange={setIsOpen}>
 					<SheetTrigger asChild className="md:hidden">
 						<Button variant="ghost" size="icon" className="ml-auto text-white hover:bg-blue-700">
@@ -68,6 +71,7 @@ function Layout({ children }: props) {
 						</div>
 					</SheetContent>
 				</Sheet>
+				
 			</header>
 
 			<main className="flex flex-col min-h-screen bg-blue-50">
