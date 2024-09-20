@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu, Zap } from "lucide-react"
-import { ReactNode, useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from "react"
+import { Link, Outlet } from "react-router-dom"
 
-interface props {
-	children: ReactNode
-}
+// interface props {
+// 	children: ReactNode
+// }
 
 const NavItems = ({ mobile = false }) => (
 	<>
@@ -26,7 +26,7 @@ const NavItems = ({ mobile = false }) => (
 )
 
 
-function Layout({ children }: props) {
+function Layout() {
 
 	const [isOpen, setIsOpen] = useState(false)
 
@@ -70,7 +70,7 @@ function Layout({ children }: props) {
 			</header>
 
 			<main className="flex flex-col min-h-screen bg-blue-50">
-				{children}
+				<Outlet />
 			</main>
 
 			<footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-blue-800 text-white">
