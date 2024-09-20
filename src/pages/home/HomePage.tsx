@@ -54,8 +54,8 @@ export default function Component() {
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-4 justify-center">
-								<Button variant="outline" className="bg-orange-500 text-white text-md border-white md:text-md hover:bg-orange-600">Solicitar Presupuesto</Button>
-								<Button variant="outline" className="text-white border-white text-md hover:bg-blue-700">
+								<Button variant="outline" className="bg-orange-500 text-white text-md border-white hover:bg-orange-600 hover:text-white">Solicitar Presupuesto</Button>
+								<Button variant="outline" className="bg-black opacity-70 text-white  border-white text-md drop-shadow-lg text-outline hover:bg-black hover:opacity-100 hover:text-white">
 									Nuestros Servicios
 								</Button>
 							</div>

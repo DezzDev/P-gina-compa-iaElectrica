@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, X, Zap } from "lucide-react"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Menu, Zap } from "lucide-react"
 import { ReactNode, useState } from "react"
+import { Link } from "react-router-dom"
 
 interface props {
 	children: ReactNode
@@ -9,18 +10,18 @@ interface props {
 
 const NavItems = ({ mobile = false }) => (
 	<>
-		<a className={`text-sm font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} href="#">
+		<Link to="/" className={`text-md font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`}>
 			Inicio
-		</a>
-		<a className={`text-sm font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} href="#">
+		</Link>
+		<Link to="servicios" className={`text-md font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`}>
 			Servicios
-		</a>
-		<a className={`text-sm font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} href="#">
+		</Link>
+		<Link to="/" className={`text-md font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} >
 			Sobre Nosotros
-		</a>
-		<a className={`text-sm font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} href="#">
+		</Link>
+		<Link to="contacto" className={`text-smd font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} >
 			Contacto
-		</a>
+		</Link>
 	</>
 )
 
@@ -49,22 +50,16 @@ function Layout({ children }: props) {
 							<span className="sr-only">Abrir menú</span>
 						</Button>
 					</SheetTrigger>
-					<SheetContent side="right" className="w-[240px] sm:w-[300px] bg-blue-700 text-white p-0">
+					<SheetContent  side="right" className="w-[240px] sm:w-[300px] bg-blue-700 text-white p-0">
 						<div className="flex flex-col h-full">
 							<div className="flex items-center justify-between p-4 border-b border-blue-600">
-								<span className="text-lg font-semibold">Menú</span>
-								<SheetClose asChild>
-									<Button variant="ghost" size="icon" className="text-white hover:bg-blue-600">
-										<X className="h-5 w-5" />
-										<span className="sr-only">Cerrar menú</span>
-									</Button>
-								</SheetClose>
+								<span className="text-2xl font-semibold">Menú</span>
 							</div>
 							<nav className="flex flex-col gap-4 p-4">
 								<NavItems mobile />
 							</nav>
 							<div className="mt-auto p-4 border-t border-blue-600">
-								<Button className="w-full bg-orange-500 text-white hover:bg-orange-600">
+								<Button className="w-full bg-orange-500 text-white text-md hover:bg-orange-600">
 									Contactar
 								</Button>
 							</div>
