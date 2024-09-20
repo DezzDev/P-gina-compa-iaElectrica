@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Zap, Clock, Shield, ThumbsUp, Wrench } from "lucide-react"
-import imgHero from "@/assets/hero-image.jpg"
+//import imgHero from "@/assets/hero-image.jpg"
 import silueta from "@/assets/silueta-electricista.jpeg"
 
 export default function Component() {
@@ -25,14 +25,27 @@ export default function Component() {
 
 	return (
 		<>
-			<section className="hero-section w-full  py-12 md:py-24 lg:py-32 xl:py-48  text-white">
+			<section 
+				className="relative py-12 md:py-24 lg:py-32 xl:py-48 text-white bg-black"
+				style={{ height: `calc(100vh - var(--height-header))`}}	
+			>
 				
-				
+				{/* img hero */}
+				<div
+					className="absolute inset-0 bg-cover bg-center filter blur-sm"
+					style={{backgroundImage: `url(${silueta})`}}
+				></div>
 
-				<div className="absolute top-1/3 z-10 px-4 md:px-6">
-					<div className="grid grid-cols-1 gap-8 items-center">
-						<div className="flex flex-col items-center md:items-start space-y-4 text-center md:text-left">
-							<div className="space-y-2">
+				{/* overlay oscuro */}
+				<div
+					className="absolute inset-0 bg-black opacity-50"
+				></div>
+				
+				{/* texto hero */}
+				<div className="absolute inset-0 flex justify-center items-center">
+					
+						<div className="flex flex-col items-center justify-center gap-4 px-12 md:px-24 lg:px-32">
+							<div className="space-y-2 drop-shadow-lg text-outline text-center">
 								<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
 									Soluciones Eléctricas Profesionales
 								</h1>
@@ -41,27 +54,17 @@ export default function Component() {
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-4 justify-center">
-								<Button className="bg-orange-500 text-white hover:bg-orange-600">Solicitar Presupuesto</Button>
-								<Button variant="outline" className="text-white border-white hover:bg-blue-700">
+								<Button variant="outline" className="bg-orange-500 text-white text-md border-white md:text-md hover:bg-orange-600">Solicitar Presupuesto</Button>
+								<Button variant="outline" className="text-white border-white text-md hover:bg-blue-700">
 									Nuestros Servicios
 								</Button>
 							</div>
 						</div>
-						{/* <div className="flex justify-center ">
-							<img
-								src={imgHero}
-								alt="Electricista profesional trabajando"
-								className="rounded-lg shadow-lg max-w-full h-auto"
-								width={400}
-								height={400}
-							/>
-						</div> */}
-					</div>
+						
+					
 				</div>
 
-				<div className="h-ful w-full blur-sm">
-					<img src={silueta} alt="silueta electricista" />
-				</div>
+				
 
 			</section>
 			<section className="w-full py-12 md:py-24 lg:py-32 bg-white">
