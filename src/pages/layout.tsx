@@ -16,7 +16,7 @@ const NavItems = ({ mobile = false }) => (
 		<Link to="servicios" className={`text-md font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`}>
 			Servicios
 		</Link>
-		<Link to="/" className={`text-md font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} >
+		<Link to="nosotros" className={`text-md font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} >
 			Sobre Nosotros
 		</Link>
 		<Link to="contacto" className={`text-smd font-medium hover:text-orange-400 transition-colors ${mobile ? 'text-blue-100' : ''}`} >

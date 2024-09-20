@@ -5,6 +5,7 @@ import Layout from "./pages/layout"
 import './App.css'
 import ContactPage from "./pages/contact/ContactPage"
 import ServicesPage from "./pages/services/ServicesPage"
+import AboutPage from "./pages/about/AboutPage"
 
 function App() {
 
@@ -17,8 +18,9 @@ function App() {
 			<Route path="/" element={<Layout />} >
 
 				<Route index element={<Home />} />
-				<Route path="/contacto" element={<ContactPage />} />
 				<Route path="/servicios" element={<ServicesPage />} />
+				<Route path="/nosotros" element={<AboutPage />} />
+				<Route path="/contacto" element={<ContactPage />} />
 				<Route path="*" element={<NoMatch />} />
 			</Route>
 
