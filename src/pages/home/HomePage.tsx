@@ -26,8 +26,8 @@ export default function Component() {
 	return (
 		<>
 			<section 
-				className="relative py-12 md:py-24 lg:py-32 xl:py-48 text-white bg-black"
-				style={{ height: `calc(100vh - var(--height-header))`}}	
+				className="relative py-12 md:py-24 lg:py-32 xl:py-48 text-white bg-black h-screen" 
+				
 			>
 				
 				{/* img hero */}
