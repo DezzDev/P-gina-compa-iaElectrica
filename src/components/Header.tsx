@@ -50,7 +50,7 @@ function Header() {
 			className={`h-16 px-4 lg:px-6 flex items-center fixed z-10 w-full text-white transition-colors duration-700 ${scrolled ? "bg-black opacity-80" : "bg-transparent"}`}
 		>
 
-			<div className="w-full h-full absolute blur-sm inset-0"></div>
+		
 
 			<a className="flex items-center justify-center" href="#">
 				<Zap className="h-6 w-6 text-orange-400" />
