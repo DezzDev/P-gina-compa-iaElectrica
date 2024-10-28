@@ -47,7 +47,7 @@ function Header() {
 
 	return (
 		<header
-			className={`h-16 px-4 lg:px-6 flex items-center fixed z-10 w-full text-white transition-colors duration-700 ${scrolled ? "bg-black opacity-80" : "bg-transparent"}`}
+			className={`h-16 px-4 lg:px-6 flex items-center fixed z-10 w-full text-white transition-colors duration-700 ${scrolled ? "bg-blue-950 opacity-80" : "bg-transparent"}`}
 		>
 
 		

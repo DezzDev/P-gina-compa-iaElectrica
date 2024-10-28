@@ -18,7 +18,7 @@ function Layout() {
 		<>
 			<Header />
 
-			<main className="flex flex-col min-h-screen bg-blue-50">
+			<main className="flex flex-col min-h-screen">
 				<Outlet />
 			</main>
 

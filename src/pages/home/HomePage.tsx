@@ -2,13 +2,16 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Zap, Clock, Shield, ThumbsUp, Wrench } from "lucide-react"
-//import imgHero from "@/assets/hero-image.jpg"
 import silueta from "@/assets/silueta-electricista.jpeg"
+import {useNavigate} from "react-router-dom"
 
 export default function Component() {
 
 	const [name, setName] = useState("")
 	const [phone, setPhone] = useState("")
+
+	const navigate = useNavigate()
+
 
 
 
@@ -38,7 +41,7 @@ export default function Component() {
 
 				{/* overlay oscuro */}
 				<div
-					className="absolute inset-0 bg-black opacity-50"
+					className="absolute inset-0 bg-black opacity-60"
 				></div>
 				
 				{/* texto hero */}
@@ -49,13 +52,23 @@ export default function Component() {
 								<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
 									Soluciones Eléctricas Profesionales
 								</h1>
-								<p className="mx-auto md:mx-0 max-w-[700px] text-blue-100 md:text-xl">
+								<p className="mx-auto md:mx-0 max-w-[700px] md:text-xl">
 									Expertos en instalaciones y reparaciones eléctricas. Servicio confiable y eficiente para hogares y negocios.
 								</p>
 							</div>
 							<div className="flex flex-wrap gap-4 justify-center">
-								<Button variant="outline" className="bg-orange-500 text-white text-md border-white hover:bg-orange-600 hover:text-white">Solicitar Presupuesto</Button>
-								<Button variant="outline" className="bg-black opacity-70 text-white  border-white text-md drop-shadow-lg text-outline hover:bg-black hover:opacity-100 hover:text-white">
+								<Button
+									 variant="outline" 
+									 className="bg-tertiary text-md  hover:bg-accent-tertiary hover:text-white"
+									 onClick={()=> navigate("/contacto")}
+									 >
+										Solicitar Presupuesto
+									</Button>
+								<Button 
+									variant="outline" 
+									className="bg-black opacity-60 text-white  text-md drop-shadow-lg text-outline hover:bg-black hover:opacity-100 hover:text-white"
+									onClick={()=> navigate("/servicios")}
+								>
 									Nuestros Servicios
 								</Button>
 							</div>

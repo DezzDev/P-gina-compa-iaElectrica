@@ -19,6 +19,8 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+
+		
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -34,6 +36,10 @@ module.exports = {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+				tertiary: {
+					DEFAULT: "hsl(var(--tertiary))",
+					foreground: "hsl(var(--tertiary-foreground))"
+				},
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -45,6 +51,7 @@ module.exports = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+					tertiary: "hsl(var(--accent-tertiary))"
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
