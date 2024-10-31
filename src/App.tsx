@@ -2,11 +2,12 @@
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/home/HomePage"
 import Layout from "./pages/layout"
-import './App.css'
 import ContactPage from "./pages/contact/ContactPage"
 import ServicesPage from "./pages/services/ServicesPage"
 import AboutPage from "./pages/about/AboutPage"
 import Page404 from "./pages/404/Page404"
+import ScrollToTop from "./components/ScrollToTop"
+import './App.css'
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
 
 
 		<Routes>
-
+			{/* to go to top when change page */}
+			<ScrollToTop/> 
 			<Route path="/" element={<Layout />} >
 
 				<Route index element={<Home />} />
