@@ -3,9 +3,7 @@ import Header from "@/components/Header"
 
 import { Outlet } from "react-router-dom"
 
-// interface props {
-// 	children: ReactNode
-// }
+
 
 
 
@@ -23,7 +21,8 @@ function Layout() {
 			</main>
 
 			<Footer />
-
+			
+			
 		</>
 	)
 }
