@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig(({mode})=>{
   if(mode === "production"){
     return {
-      base: "/Page-electricidad/",
+     // base: "/Page-electricidad/",
       plugins: [react()],
       resolve: {
         alias: {
