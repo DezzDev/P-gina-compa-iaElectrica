@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Award, Clock, ThumbsUp } from "lucide-react"
 import companyData from "@/data/company.json"
