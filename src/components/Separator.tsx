@@ -1,4 +1,4 @@
-
+import companyData from "@/data/company.json"
 
 export function Separator (){
 	return (
@@ -8,7 +8,7 @@ export function Separator (){
 						<p className="text-5xl text-center">
 							Solicita más información
 						</p>
-						<p className="text-2xl text-center"><b>Llámanos</b> sin compromiso: <a className="text-tertiary" href="tel:672608183"><span className="underline">672608183</span></a></p>
+						<p className="text-2xl text-center"><b>Llámanos</b> sin compromiso: <a className="text-tertiary" href={`tel:${companyData.tel}`}><span className="underline">{companyData.tel}</span></a></p>
 
 					</div>
 			</section>

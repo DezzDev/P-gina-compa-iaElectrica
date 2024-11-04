@@ -23,7 +23,7 @@ export default function Component() {
 			<ChooseUs />
 
 			{/* contact  */}
-			<Contact />
+			<Contact bgSection="bg-primary" textSection="text-primary-foreground"/>
 
 		</>
 	)
