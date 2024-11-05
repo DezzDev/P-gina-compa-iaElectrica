@@ -1,11 +1,8 @@
-import { Button } from "@/components/ui/button"
 import companyData from "@/data/company.json"
 import { Services } from "@/components/sections/Services"
-import { useNavigate } from "react-router-dom"
 import { Contact } from "@/components/sections/Contact"
 
 export default function ServicesPage() {
-	const navigate = useNavigate()
 
 	return (
 

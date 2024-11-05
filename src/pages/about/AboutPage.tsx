@@ -1,17 +1,13 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Award, Clock, ThumbsUp } from "lucide-react"
 import companyData from "@/data/company.json"
-import { CardValues, ListValues } from "@/components/CardValues"
+import { ListValues } from "@/components/ListValues"
 import { Separator } from "@/components/Separator"
 import { Contact } from "@/components/sections/Contact"
 
 function AboutPage() {
-	const teamMembers = [
-		{ name: "Daniel Zapata", role: "Fundador y CEO", image: "/perfil.jpg" },
-
-
-
-	]
+	// const teamMembers = [
+	// 	{ name: "Daniel Zapata", role: "Fundador y CEO", image: "/perfil.jpg" },
+	// ]
 
 	const values = [
 		{ icon: Users, title: "Enfoque en el Cliente", description: "Priorizamos las necesidades y satisfacción de nuestros clientes en todo momento." },
