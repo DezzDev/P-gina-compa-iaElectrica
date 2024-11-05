@@ -27,7 +27,7 @@ function Header() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const offset = window.scrollY
-			if (offset >= 80) {
+			if (offset >= 20) {
 				setScrolled(true)
 			} else {
 				setScrolled(false)
@@ -41,7 +41,7 @@ function Header() {
 
 	return (
 		<header
-			className={`fixed z-10 top-0 w-full text-primary-foreground transition-colors duration-500  ${scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-primary/80" : "bg-transparent"}`}
+			className={`fixed z-10 top-0 w-full text-primary-foreground transition-colors duration-500  ${scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-primary/90" : "bg-transparent"}`}
 		>
 			<div className="container flex justify-between h-14 items-center max-w-screen-2xl">
 

@@ -7,7 +7,7 @@ function ContactPage() {
 	
 	return (
 		 <div className="flex-1">
-        <section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-blue-800 text-white">
+        <section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
           <div className="container px-4 md:px-6">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-4">
               Contacta con {companyData.name}

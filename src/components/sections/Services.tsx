@@ -12,7 +12,7 @@ export function Services(){
 	return (
 		<section className="w-full py-12 md:py-24 lg:py-32">
 		<div className="container">
-			<h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Qué ofrecemos</h2>
+			<h2 className="text-3xl font-bold tracking-tighter text-center mb-12 sm:text-4xl lg:mb-16 lg:text-5xl">Qué ofrecemos</h2>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				{services.map((service,index) =>(
 					<CardService
