@@ -4,21 +4,21 @@ import { Contact } from "@/components/sections/Contact"
 
 function ContactPage() {
 
-	
-	return (
-		 <div className="flex-1">
-        <section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
-          <div className="container px-4 md:px-6">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-4">
-              Contacta con {companyData.name}
-            </h1>
-            <p className="max-w-[700px] text-blue-100 md:text-xl">
-              Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros para cualquier consulta o servicio que necesites.
-            </p>
-          </div>
-        </section>
 
-				{/* <section className="w-full py-6 md:py-12 lg:py-24">
+	return (
+		<>
+			<section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+				<div className="container px-4 md:px-6">
+					<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-4">
+						Contacta con {companyData.name}
+					</h1>
+					<p className="max-w-[700px] text-blue-100 md:text-xl">
+						Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros para cualquier consulta o servicio que necesites.
+					</p>
+				</div>
+			</section>
+
+			{/* <section className="w-full py-6 md:py-12 lg:py-24">
           <div className="container px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
               Horario de Atención
@@ -31,15 +31,12 @@ function ContactPage() {
            
           </div>
         </section> */}
-        
-        <section className="w-full ">
-         <Contact />
 
-        </section>
+			<section className="w-full ">
+				<Contact />
 
-				
-
-      </div>
+			</section>
+		</>
 	)
 }
 

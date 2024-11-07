@@ -16,12 +16,12 @@ export function CardService({icon,title,description}:props){
 	return(
 		<Card className="shadow-md hover:bg-primary/10">
 			<CardHeader>
-				<CardTitle className="flex items-center gap-5 justify-center">
+				<CardTitle className="flex items-center gap-5 justify-center text-xl font-bold lg:text-2xl">
 					{icon}
-					<span className="text-xl font-bold sm:text-2xl">{title}</span>
+					{title}
 				</CardTitle>
 			</CardHeader>
-			<CardContent>
+			<CardContent className="sm:text-lg">
 				{description}
 			</CardContent>
 		</Card>

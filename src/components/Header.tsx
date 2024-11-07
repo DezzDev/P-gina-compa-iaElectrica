@@ -10,7 +10,8 @@ const navItems = {
 	inicio: "Inicio",
 	servicios: "Servicios",
 	nosotros: "Sobre Nosotros",
-	contacto: "Contacto"
+	blog: "Blog",
+	contacto: "Contacto",
 
 }
 
@@ -41,7 +42,7 @@ function Header() {
 
 	return (
 		<header
-			className={`fixed z-10 top-0 w-full text-primary-foreground transition-colors duration-500  ${scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-primary/90" : "bg-transparent"}`}
+			className={`fixed z-10 top-0 w-full text-primary-foreground transition-colors duration-500   ${scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-primary/90" : "bg-transparent"}`}
 		>
 			<div className="container flex justify-between h-14 items-center max-w-screen-2xl">
 

@@ -5,9 +5,7 @@ import { Contact } from "@/components/sections/Contact"
 export default function ServicesPage() {
 
 	return (
-
-
-		<div className="flex-1 ">
+		<>
 			<section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
 				<div className="container px-4 md:px-6">
 					<h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none mb-4">
@@ -23,23 +21,7 @@ export default function ServicesPage() {
 
 			<Contact bgSection="bg-primary" textSection="text-primary-foreground" />
 
-			{/* <section className="w-full py-12 md:py-24 lg:py-32 bg-blue-100">
-				<div className="container px-4 md:px-6 text-center">
-					<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl  mb-4">
-						¿Necesita un servicio personalizado?
-					</h2>
-					<p className="max-w-[600px] mx-auto md:text-xl mb-8">
-						Contáctenos para discutir sus necesidades específicas. Estamos listos para ayudarle con cualquier proyecto eléctrico.
-					</p>
-					<Button 
-						className="bg-orange-500 text-white hover:bg-orange-600"
-						onClick={()=>{navigate("/contacto")}}
-					>
-						Solicitar Presupuesto
-					</Button>
-				</div>
-			</section> */}
-		</div>
+		</>
 
 
 	)

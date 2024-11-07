@@ -1,6 +1,5 @@
 import { Users, Award, Clock, ThumbsUp } from "lucide-react"
 import companyData from "@/data/company.json"
-import { ListValues } from "@/components/ListValues"
 import { Separator } from "@/components/Separator"
 import { Contact } from "@/components/sections/Contact"
 
@@ -19,7 +18,7 @@ function AboutPage() {
 	return (
 
 
-		<main className="flex-1">
+		<>
 
 			<section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
 				<div className="container px-4 md:px-6">
@@ -35,15 +34,16 @@ function AboutPage() {
 			{/* history */}
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-					<div className="pl-4 md:pl-6">
+
+					<div className="container max-w-[600px]">
 						<h2 className="text-3xl font-bold tracking-tighter text-center mb-12 sm:text-4xl  lg:mb-16 lg:text-5xl">
 							Nuestra Historia
 						</h2>
-						<div>
-							<p className="mb-4">
+						<div className="space-y-4 sm:text-lg lg:text-xl">
+							<p>
 								Fundada en 2005, DyCE nació con la visión de transformar la industria eléctrica en nuestra comunidad. Desde nuestros humildes comienzos como un pequeño negocio familiar, hemos crecido hasta convertirnos en un referente en el sector.
 							</p>
-							<p className="mb-4">
+							<p>
 								A lo largo de los años, hemos ampliado nuestros servicios y conocimientos, adaptándonos a las nuevas tecnologías y tendencias en eficiencia energética y energías renovables.
 							</p>
 							<p >
@@ -52,14 +52,9 @@ function AboutPage() {
 						</div>
 
 					</div>
-					<div className="flex justify-end">
-						<img
-							src="/electricista1.webp"
-							alt="Equipo de ElectricidadPro"
-							className="shadow-lg max-w-full h-auto "
-
-						/>
-					</div>
+					<div className="h-full bg-cover bg-no-repeat md:bg-center min-h-[400px] xl:bg-top"
+						style={{backgroundImage: "url(/electricista1.webp)"}}
+					></div>
 				</div>
 
 			</section>
@@ -98,31 +93,28 @@ function AboutPage() {
 			{/* values */}
 			<section className="w-full py-12 md:py-24 lg:py-32">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-					<div className="container">
+
+					<div className="container max-w-[600px]">
 						<h2 className="text-3xl font-bold tracking-tighter text-center mb-12 sm:text-4xl lg:mb-16 lg:text-5xl">
 							Nuestros Valores
 						</h2>
-						<div className="flex flex-col gap-y-2 lg:gap-y-4 mx-auto max-w-[600px]">
+						<div className="flex flex-col gap-y-2 lg:gap-y-4 lg:text-lg">
 							{values.map((value, index) => (
-								<ListValues
-									key={index}
-									title={value.title}
-									description={value.description}
-									icon={<value.icon className="h-8 w-8 text-primary" />}
-								/>
+								<div key={index} className="flex gap-x-4">
+									<value.icon className="h-8 w-8 min-w-8 text-primary" />
+									<div>
+									<h3 className="text-xl lg:text-2xl font-bold mb-2">{value.title}</h3>
+									<p className="sm:text-lg lg:text-xl">{value.description}</p>
+									</div>
+								</div>
 							))}
 
 						</div>
 
 					</div>
-					<div className="flex justify-end">
-						<img
-							src="/electricista3.webp"
-							alt="Equipo de ElectricidadPro"
-							className="shadow-lg max-w-full h-auto "
-
-						/>
-					</div>
+					<div className="h-full bg-cover bg-no-repeat md:bg-center min-h-[400px] xl:bg-top"
+						style={{backgroundImage: "url(electricista3.webp)"}}
+					></div>
 
 				</div>
 			</section>
@@ -130,7 +122,7 @@ function AboutPage() {
 			{/* contact */}
 			<Contact bgSection="bg-primary" textSection="text-primary-foreground" />
 
-		</main>
+		</>
 
 	)
 }

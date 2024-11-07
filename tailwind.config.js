@@ -20,6 +20,9 @@ module.exports = {
 
 		
     extend: {
+			gridTemplateColumns:{
+				"auto-fit-320": "repeat(auto-fit, 320px)"
+			},
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
