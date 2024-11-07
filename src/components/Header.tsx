@@ -28,7 +28,7 @@ function Header() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const offset = window.scrollY
-			if (offset >= 20) {
+			if (offset >= 10) {
 				setScrolled(true)
 			} else {
 				setScrolled(false)
