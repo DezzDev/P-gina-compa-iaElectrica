@@ -44,31 +44,33 @@ export default function BlogPage() {
 
 			{/* posts */}
 			<section className="w-full py-12 md:py-24 lg:py-32">
-				<div className="container grid grid-cols-auto-fit-320 items-center justify-center gap-2">
+				<div className="container grid grid-cols-auto-fit-320 justify-center gap-3">
 					{posts.map(post => {
 						const postImageUrl = post?.image
 						? urlFor(post.image)?.url()
 						: null
 
-						console.log(postImageUrl)
+						console.log(post.content)
 						return (
 
-							<Card key={post._id}>
+							<Card key={post._id} className="flex flex-col gap-y-3 shadow-md ">
 								<CardHeader 
-									className="aspect-video bg-cover bg-no-repeat h-40 w-80" 
+									className="aspect-video bg-cover bg-no-repeat rounded-sm" 
 									style={postImageUrl ? {backgroundImage: `url(${postImageUrl})`} : {backgroundImage: "url(/blogPost.webp)"}}
 								>
 								</CardHeader>
-								<CardContent className="space-y-2 mt-2">
+								<CardContent className="flex flex-col gap-2">
 									<CardTitle>
 										{post.title}
 									</CardTitle>
 									<CardDescription>
-										{post.content.substring(0, 30)}
-										{post.content.length >= 30 ? "..." : ""}
+										{post.content[0].children[0].text.substring(0,100)}
+										{post.content[0].children[0].text.length >= 100 ? "..." : ""}
+										
 									</CardDescription>
+									
 								</CardContent>
-								<CardFooter >
+								<CardFooter className="mt-auto" >
 									<Link
 										to={post.slug.current}
 										className="flex gap-1 items-center text-tertiary"

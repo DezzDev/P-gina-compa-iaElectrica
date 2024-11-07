@@ -2,7 +2,7 @@ import { SanityDocument } from "@sanity/client";
 
 export interface BlogPost extends SanityDocument {
 	title: string,
-	content:string,
+	content: Body[],
 	image: Image,
 	publishedAt: string,
 	slug: Slug
