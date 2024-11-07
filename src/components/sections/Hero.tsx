@@ -40,7 +40,7 @@ export function Hero (){
 							</Button>
 							<Button
 								variant="outline"
-								className="bg-black opacity-60 text-white  text-md drop-shadow-lg text-outline hover:bg-black hover:opacity-100 hover:text-white"
+								className="bg-black opacity-90 text-white  text-md drop-shadow-lg text-outline hover:bg-black hover:opacity-100 hover:text-white"
 								onClick={() => navigate("/servicios")}
 							>
 								Nuestros Servicios
