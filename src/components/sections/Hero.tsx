@@ -1,6 +1,6 @@
 import {Button} from "@/components/ui/button"
 import { useNavigate } from "react-router-dom"
-import silueta from "@/assets/silueta-electricista.jpeg"
+import silueta from "@/assets/silueta-electricista.webp"
 
 export function Hero (){
 	const navigate = useNavigate()
