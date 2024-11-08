@@ -50,7 +50,7 @@ export default function BlogPage() {
 						? urlFor(post.image)?.url()
 						: null
 
-						console.log(post.content)
+					
 						return (
 
 							<Card key={post._id} className="flex flex-col gap-y-3 shadow-md ">

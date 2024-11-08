@@ -18,14 +18,14 @@ const urlFor = (source: SanityImageSource) => (
 export default function BlogPostPage() {
 	const { id } = useParams()
 	const [post, setPost] = useState<BlogPost>()
-
+	console.log(id)
 	useEffect(() => {
 		const POST_QUERY = `*[_type == "post" && slug.current == "${id}"]`
-		console.log(POST_QUERY)
+		
 		client.fetch<BlogPost[]>(POST_QUERY).then(data => {
 
 			setPost(data[0])
-			console.log(data)
+			
 		})
 	}, [])
 

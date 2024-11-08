@@ -1,23 +1,26 @@
-import { Menu, Zap } from "lucide-react"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
+import { Menu, Zap } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Button } from "./ui/button"
 import companyData from "@/data/company.json"
 
 
 const navItems = {
-	inicio: "Inicio",
-	servicios: "Servicios",
-	nosotros: "Sobre Nosotros",
-	blog: "Blog",
-	contacto: "Contacto",
+	"/": "Inicio",
+	"/servicios": "Servicios",
+	"/nosotros": "Sobre Nosotros",
+	"/blog": "Blog",
+	"/contacto": "Contacto",
 
 }
 
 
 
 function Header() {
+
+	// get path of the current page
+	const path = useLocation().pathname	
 
 	// menu mobile
 	const [isOpen, setIsOpen] = useState(false)
@@ -38,11 +41,11 @@ function Header() {
 		window.addEventListener("scroll", handleScroll)
 	}, [])
 
-
+	const navigate = useNavigate()
 
 	return (
 		<header
-			className={`fixed z-10 top-0 w-full text-primary-foreground transition-colors duration-500   ${scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-primary/90" : "bg-transparent"}`}
+			className={`fixed z-10 top-0 w-full text-primary-foreground transition-colors duration-500  ${scrolled ? "backdrop-blur supports-[backdrop-filter]:bg-primary/90" : "bg-transparent"}`}
 		>
 			<div className="container flex justify-between h-14 items-center max-w-screen-2xl">
 
@@ -53,18 +56,14 @@ function Header() {
 
 				<nav className="hidden md:flex gap-6">
 
-					{Object.entries(navItems).map(([key, label]) => {
-						let destination = ""
-						if (key == "inicio") {
-							destination = "/"
-						} else {
-							destination = key
-						}
+					{Object.entries(navItems).map(([key, label],index) => {
+						
 						return (
 							<Link 
-								to={destination} 
-								className={`text-md font-medium hover:text-orange-400 transition-colors`}
-								key={key}
+								to={key} 
+								className={`text-md font-medium hover:text-orange-400 transition-colors 
+									${key === path ? "text-tertiary" : ""}`}
+								key={index}
 							>
 								{label}
 							</Link>
@@ -88,19 +87,15 @@ function Header() {
 
 							<nav className="flex flex-col gap-4 p-4">
 
-								{Object.entries(navItems).map(([key, label]) => {
-									let destination = ""
-									if (key == "inicio") {
-										destination = "/"
-									} else {
-										destination = key
-									}
+								{Object.entries(navItems).map(([key, label],index) => {
+								
 									return (
 										<Link 
 											onClick={()=>{setIsOpen(false)}} 
-											to={destination} 
-											className={`text-md font-medium hover:text-orange-400 transition-colors`}
-											key={key}
+											to={key} 
+											className={`text-md font-medium hover:text-orange-400 transition-colors
+												${key === path ? "text-tertiary" : ""}`}
+											key={index}
 										>
 											{label}
 										</Link>
@@ -108,7 +103,13 @@ function Header() {
 								})}
 							</nav>
 							<div className="mt-auto border-t border-primary-foreground/20">
-								<Button className=" mt-4 bg-tertiary text-white text-md hover:bg-accent-tertiary">
+								<Button 
+									className=" mt-4 bg-tertiary text-white text-md hover:bg-accent-tertiary"
+									onClick={()=>{
+										navigate("/contacto")
+										setIsOpen(false)
+									}}
+								>
 									Solicitar presupuesto
 								</Button>
 							</div>

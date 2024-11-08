@@ -1,9 +1,12 @@
-import companyData from "@/data/company.json"
 import { Services } from "@/components/sections/Services"
 import { Contact } from "@/components/sections/Contact"
+import companyData from "@/data/company.json"
+
 
 export default function ServicesPage() {
-
+	
+	
+	
 	return (
 		<>
 			<section className="w-full pt-16 pb-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">

@@ -77,9 +77,7 @@ export function Contact({bgSection, textSection}:props) {
 								<CardTitle className="text-center">
 									Información de contacto
 								</CardTitle>
-								<CardDescription className="text-center">
-									{/* Solicite un presupuesto sin compromiso */}
-								</CardDescription>
+								
 							</CardHeader>
 							<CardContent className="flex flex-col justify-center  gap-6">
 								

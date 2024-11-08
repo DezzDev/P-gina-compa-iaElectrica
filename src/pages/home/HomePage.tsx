@@ -4,7 +4,10 @@ import { Hero } from "@/components/sections/Hero"
 import { ChooseUs } from "@/components/sections/ChooseUs"
 import { Contact } from "@/components/sections/Contact"
 
+
 export default function Component() {
+
+
 
 	return (
 		<>
