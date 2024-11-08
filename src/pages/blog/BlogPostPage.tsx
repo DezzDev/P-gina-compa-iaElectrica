@@ -53,7 +53,7 @@ export default function BlogPostPage() {
 						{postImageUrl &&
 
 							<div
-								className="h-[300px] sm:h-[400px] lg:h-[500px] max-w-[1024px] mx-auto bg-cover"
+								className="aspect-video mx-auto bg-cover"
 								style={{ backgroundImage: `url(${postImageUrl})` }}
 							>
 							</div>
